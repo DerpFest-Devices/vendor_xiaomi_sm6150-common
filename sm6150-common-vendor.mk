@@ -773,6 +773,8 @@ PRODUCT_PACKAGES += \
     imssettings \
     uceShimService \
     dpmserviceapp \
+    HotwordEnrollmentOKGoogleHEXAGON \
+    HotwordEnrollmentXGoogleHEXAGON \
     ims \
     qcrilmsgtunnel \
     WfdCommon \
