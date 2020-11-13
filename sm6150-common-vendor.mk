@@ -792,9 +792,9 @@ PRODUCT_PACKAGES += \
     com.quicinc.cne.constants@2.0 \
     com.quicinc.cne.constants@2.1 \
     IFAAService \
+    SoterService \
     CneApp \
     IWlanService \
-    SoterService \
     TimeService \
     com.qualcomm.qti.gpudrivers.sm6150.api30 \
     PowerOffAlarm \
