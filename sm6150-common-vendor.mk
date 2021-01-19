@@ -708,7 +708,6 @@ PRODUCT_PACKAGES += \
     QtiTelephonyService \
     datastatusnotification \
     embms \
-    imssettings \
     WfdService \
     dpmserviceapp \
     ims \
