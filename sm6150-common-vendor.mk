@@ -692,6 +692,7 @@ PRODUCT_PACKAGES += \
     CneApp \
     IWlanService \
     TimeService \
+    com.qualcomm.qti.gpudrivers.sm6150.api30 \
     PowerOffAlarm \
     DeviceInfo \
     QtiTelephonyService \
