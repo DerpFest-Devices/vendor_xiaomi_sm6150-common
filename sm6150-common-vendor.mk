@@ -683,6 +683,7 @@ PRODUCT_PACKAGES += \
     dpmserviceapp \
     ims \
     qcrilmsgtunnel \
+    WfdCommon \
     tcmclient \
     audiosphere \
     com.android.hotwordenrollment.common.util \
