@@ -668,7 +668,6 @@ PRODUCT_PACKAGES += \
     IWlanService \
     TimeService \
     PowerOffAlarm \
-    QtiTelephony \
     QtiTelephonyService \
     WfdService \
     dpmserviceapp \
