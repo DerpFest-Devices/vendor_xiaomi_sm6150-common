@@ -16,6 +16,31 @@ soong_namespace {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.qti.diaghal-V1-ndk",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system/lib64/vendor.qti.diaghal-V1-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "android.hardware.common-V2-ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
     name: "eglSubDriverAndroid",
     owner: "xiaomi",
     strip: {
@@ -12422,6 +12447,8 @@ cc_prebuilt_library_shared {
                 "libhidlmemory",
                 "libc",
                 "libcutils",
+                "libbinder_ndk",
+                "vendor.qti.diaghal-V1-ndk",
                 "libc++",
                 "libm",
                 "libdl",
