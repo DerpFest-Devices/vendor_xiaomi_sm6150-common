@@ -151,7 +151,6 @@ PRODUCT_PACKAGES += \
     libminkdescriptor \
     libqcbor \
     libqcci_legacy \
-    libqcodec2 \
     libqdi \
     libqdp \
     libqmi \
@@ -192,6 +191,7 @@ PRODUCT_PACKAGES += \
     libmmosal_vendor \
     libmmrtpdecoder_proprietary \
     libmmrtpencoder_proprietary \
+    libqcodec2 \
     libqtigef \
     libsmwrapper \
     libssrec \
