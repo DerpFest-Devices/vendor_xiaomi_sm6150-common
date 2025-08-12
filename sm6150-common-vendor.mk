@@ -176,7 +176,6 @@ PRODUCT_PACKAGES += \
     libadiertac \
     libadpcmdec \
     libaudcal \
-    libaudioparsers \
     libbluetooth_audio_session_qti \
     libbluetooth_audio_session_qti_2_1 \
     libcapiv2svacnn \
@@ -186,7 +185,6 @@ PRODUCT_PACKAGES += \
     libgcs-ipc \
     libgcs-osal \
     libgcs \
-    libhdmipassthru \
     liblistensoundmodel2 \
     libmmosal_vendor \
     libmmrtpdecoder_proprietary \
@@ -194,7 +192,6 @@ PRODUCT_PACKAGES += \
     libqcodec2 \
     libqtigef \
     libsmwrapper \
-    libssrec \
     libsurround_3mic_proc \
     libwfdcodecv4l2_proprietary \
     libwfdcommonutils_proprietary \
