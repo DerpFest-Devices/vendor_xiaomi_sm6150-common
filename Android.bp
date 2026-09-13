@@ -16,31 +16,6 @@ soong_namespace {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.diaghal-V1-ndk",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system/lib64/vendor.qti.diaghal-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "android.hardware.common-V2-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-}
-
-cc_prebuilt_library_shared {
     name: "eglSubDriverAndroid",
     owner: "xiaomi",
     strip: {
@@ -10257,7 +10232,6 @@ cc_prebuilt_library_shared {
                 "lib-imsvideocodec",
                 "libmediandk",
                 "libnativewindow",
-                "libion",
                 "libdmabufheap",
                 "lib-imsvtutils",
                 "libandroid",
@@ -10266,7 +10240,7 @@ cc_prebuilt_library_shared {
                 "vendor.qti.imsrtpservice@3.1",
                 "libbinder",
                 "libbinder_ndk",
-                "vendor.qti.ImsRtpService-V1-ndk",
+                "vendor.qti.ImsRtpService-V2-ndk",
                 "libdiag_system",
                 "libcutils",
                 "libutils",
@@ -10530,34 +10504,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libimscamera_jni",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libimscamera_jni.so",
-            ],
-            shared_libs: [
-                "libnativehelper",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libimsmedia_jni",
     owner: "xiaomi",
     strip: {
@@ -10598,6 +10544,84 @@ cc_prebuilt_library_shared {
         android_arm64: {
             srcs: [
                 "proprietary/system_ext/lib64/vendor.qti.ImsRtpService-V1-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "android.hardware.common-V2-ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.ImsRtpService-V2-ndk",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/vendor.qti.ImsRtpService-V2-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "android.hardware.common-V2-ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.ImsVtService-ndk",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/vendor.qti.ImsVtService-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libnativewindow",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.diaghal-V1-ndk",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/vendor.qti.diaghal-V1-ndk.so",
             ],
             shared_libs: [
                 "libbinder_ndk",
@@ -10789,17 +10813,6 @@ android_app_import {
     name: "PowerOffAlarm",
     owner: "xiaomi",
     apk: "proprietary/system_ext/app/PowerOffAlarm/PowerOffAlarm.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    system_ext_specific: true,
-}
-
-android_app_import {
-    name: "QtiTelephonyService",
-    owner: "xiaomi",
-    apk: "proprietary/system_ext/app/QtiTelephonyService/QtiTelephonyService.apk",
     certificate: "platform",
     dex_preopt: {
         enabled: false,
@@ -12361,13 +12374,6 @@ install_symlink {
     system_ext_specific: true,
     installed_location: "priv-app/WfdService/lib/arm/libwfdnative.so",
     symlink_target: "/system_ext/lib/libwfdnative.so",
-}
-
-install_symlink {
-    name: "system_ext_priv-app_ims_lib_arm64_libimscamera_jni_so",
-    system_ext_specific: true,
-    installed_location: "priv-app/ims/lib/arm64/libimscamera_jni.so",
-    symlink_target: "/system_ext/lib64/libimscamera_jni.so",
 }
 
 install_symlink {
